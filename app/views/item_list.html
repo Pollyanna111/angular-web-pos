@@ -1,0 +1,89 @@
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <ul class="nav nav-tabs container zero_border font_weight" role="tablist">
+        <li><a>Let's Go</a></li>
+        <li role="presentation"><a ng-click="go_to_main_page()">主页</a></li>
+        <li role="presentation" class="active"><a ng-click="go_to_item_list_page()">商品列表</a></li>
+        <ul class="nav nav-tabs pull-right zero_border" role="tablist">
+            <li role="presentation"><a ng-click="go_to_cart_page()">
+                <span class="glyphicon glyphicon-shopping-cart"></span>
+                <span ng-model="cart_number">购物车({{cart_number}})</span>
+            </a></li>
+        </ul>
+    </ul>
+</nav>
+
+<div class="container my_margin">
+    <div class="panel panel-default text-center">
+        <div class="panel-heading">
+            <h3 class="panel-title title_font">商品清单</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+
+                <tr>
+                    <th>分类</th>
+                    <th>名称</th>
+                    <th>单价(元)</th>
+                    <th>单位</th>
+                    <th></th>
+                </tr>
+
+                <tr>
+                    <td>饮料</td>
+                    <td>可口可乐</td>
+                    <td>3</td>
+                    <td>瓶</td>
+                    <td><a class="btn btn-primary btn-lg" role="button"
+                            ng-click="add_into_cart('可口可乐')">加入购物车</a></td>
+                </tr>
+
+                <tr>
+                    <td>饮料</td>
+                    <td>雪碧</td>
+                    <td>3</td>
+                    <td>瓶</td>
+                    <td><a class="btn btn-primary btn-lg" role="button"
+                           ng-click="add_into_cart('雪碧')">加入购物车</a></td>
+                </tr>
+
+                <tr>
+                    <td>水果</td>
+                    <td>苹果</td>
+                    <td>5.5</td>
+                    <td>斤</td>
+                    <td><a class="btn btn-primary btn-lg" role="button"
+                           ng-click="add_into_cart('苹果')">加入购物车</a></td>
+                </tr>
+
+                <tr>
+                    <td>水果</td>
+                    <td>荔枝</td>
+                    <td>15</td>
+                    <td>斤</td>
+                    <td><a class="btn btn-primary btn-lg" role="button"
+                           ng-click="add_into_cart('荔枝')">加入购物车</a></td>
+                </tr>
+
+                <tr>
+                    <td>生活用品</td>
+                    <td>电池</td>
+                    <td>2</td>
+                    <td>个</td>
+                    <td><a class="btn btn-primary btn-lg" role="button"
+                           ng-click="add_into_cart('电池')">加入购物车</a></td>
+                </tr>
+
+                <tr>
+                    <td>食品</td>
+                    <td>方便面</td>
+                    <td>4.5</td>
+                    <td>袋</td>
+                    <td><a class="btn btn-primary btn-lg" role="button"
+                           ng-click="add_into_cart('方便面')">加入购物车</a></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+</div>
